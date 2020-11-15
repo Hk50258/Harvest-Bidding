@@ -19,7 +19,7 @@ function ProductPage(props) {
                   key={index}
                   id={index}
                   title={noteItem.title}
-                  content={noteItem.content}
+                  content={noteItem.component}
                   onBid={bidFun}
                 />
               );
