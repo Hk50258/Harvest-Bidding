@@ -1,18 +1,31 @@
 import React from "react";
-import DeleteIcon from "@material-ui/icons/Delete";
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 function Note(props) {
   function handleClick() {
-    props.onDelete(props.id);
+    props.onBid(props.id);
   }
 
   return (
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
-      <button onClick={handleClick}>
-        <DeleteIcon />
-      </button>
+      
+      <TextField
+          id="outlined-number"
+          label="Number"
+          type="number"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+        />
+        
+        <br/>
+      <Button className="mt-2" variant="contained" color="primary" onClick={handleClick} >
+        Bid
+      </Button>
     </div>
   );
 }
