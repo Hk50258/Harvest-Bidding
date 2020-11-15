@@ -9,6 +9,7 @@ function Note(props) {
 
   return (
     <div className="note text-center">
+      <img src={props.imgurl} ></img>
       <h1>{props.title}</h1>
       <p>{props.content}</p>
       

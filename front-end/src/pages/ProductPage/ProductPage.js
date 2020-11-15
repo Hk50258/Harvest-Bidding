@@ -6,7 +6,7 @@ function ProductPage(props) {
     const [notes, setNotes] = useState(Data);
 
     const bidFun = () => {
-      alert("Bidded")
+      //alert("Bidded")
     }
 
 
@@ -18,6 +18,7 @@ function ProductPage(props) {
                 <Note
                   key={index}
                   id={index}
+                  imgurl={noteItem.imgurl}
                   title={noteItem.title}
                   content={noteItem.component}
                   onBid={bidFun}

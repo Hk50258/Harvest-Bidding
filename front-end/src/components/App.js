@@ -13,7 +13,6 @@ function App() {
       <Header />
       <Router history={history}>
         <Route exact path='/' component={ProductPage}></Route>
-        <Route exact path='/AboutUs' component={AboutUs}></Route>
       </Router>
       <Footer />
     </div>
