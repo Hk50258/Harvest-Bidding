@@ -18,5 +18,14 @@ export const Data = [
     {
         title: "Apple",
         component:  "Rs 40"
-    }
+    },{
+        title: "Apple",
+        component:  "Rs 40"
+    },{
+        title: "Apple",
+        component:  "Rs 40"
+    },{
+        title: "Apple",
+        component:  "Rs 40"
+    },
 ];
