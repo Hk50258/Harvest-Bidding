@@ -12,11 +12,6 @@ body {
   padding: 0 16px;
 }
 
- div.row {
-  margin-right:20%;
-  margin-left: 20%;
-} 
-
 header {
   background-color: #f5ba13;
   margin: auto -16px;
@@ -164,9 +159,30 @@ nav.navbar {
   width: 100%;
 }
 
-/* @media only screen and (max-width: 673px) {
-  div.row {
-    margin-left: 20%;
-    margin-right: 20%;
+/********** Large devices only **********/
+@media (min-width: 500px) and (max-width: 1000px) {
+  div.note{
+    margin:8px 5px;
   }
-} */
+}
+
+/********** Medium devices only **********/
+@media (min-width: 400px) and (max-width: 500px) {
+  div.note{
+    margin:15px 15%;
+  }
+}
+
+/********** Small devices only **********/
+@media (min-width: 350px) and (max-width: 400px) {
+  div.note{
+    margin:13px 12%;
+  }
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 350px) {
+  div.note{
+    margin:10px 5%; 
+  }
+}
