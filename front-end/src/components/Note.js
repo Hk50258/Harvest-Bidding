@@ -8,13 +8,13 @@ function Note(props) {
   }
 
   return (
-    <div className="note">
+    <div className="note text-center">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
       
       <TextField
           id="outlined-number"
-          label="Number"
+          label="Bidding Price"
           type="number"
           InputLabelProps={{
             shrink: true,

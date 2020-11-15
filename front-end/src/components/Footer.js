@@ -4,7 +4,9 @@ function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer>
-      <p>Copyright ⓒ {year}</p>
+    <nav class="navbar navbar-inverse">
+    <p>Copyright ⓒ {year}</p>
+    </nav>
     </footer>
   );
 }

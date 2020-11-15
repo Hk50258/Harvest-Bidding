@@ -12,6 +12,11 @@ body {
   padding: 0 16px;
 }
 
+div.row {
+  margin-right:0;
+  margin-left: 4.5rem;
+}
+
 header {
   background-color: #f5ba13;
   margin: auto -16px;
@@ -26,16 +31,33 @@ header h1 {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   text-align: center;
   bottom: 0;
   width: 100%;
   height: 2.5rem;
+  z-index: 99;
+
+}
+nav{
+  position: fixed;
 }
 
 footer p {
   color: #ccc;
 }
+
+span.navbar-brand{
+  text-decoration-color: blanchedalmond;
+}
+
+.navbar-inverse .navbar-brand, .navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+
 .note {
   background: #fff;
   border-radius: 7px;
@@ -46,33 +68,46 @@ footer p {
   float: left;
 }
 .note h1 {
-  font-size: 1.1em;
+  font-size: 1.4em;
   margin-bottom: 6px;
+  font-weight: bold;
 }
 .note p {
-  font-size: 1.1em;
+  font-size: 1.0em;
   margin-bottom: 10px;
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+.note input{
+  padding: 1.2em;
+  font-size: 1.2em;
 }
 
 .note button {
   position: relative;
   float: center;
   margin-right: 10px;
+  margin-top: 4px;
   color: white;
   border: none;
   width: 36px;
-  height: 36px;
+  height: 30px;
   cursor: pointer;
   outline: none;
-  box-shadow: ;
+  background-color: rgb(46, 51, 56);
+  font-size: 11px;
+}
+.note button:hover{
+  background-color: black;
+  text-decoration-color: blanchedalmond;
 }
 
 .note textarea {
   position: relative;
   float: left;
   width: 10px;
+  height: 10px;
 }
 
 form.create-note {
@@ -107,4 +142,18 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+
+nav.navbar {
+  position: sticky; 
+  top:0;
+  opaque: 1;
+  z-index: 99; 
+  width: 100%;
+}
+
+@media only screen and (max-width: 673px) {
+  div.row {
+    margin-left: 20%;
+  }
 }
