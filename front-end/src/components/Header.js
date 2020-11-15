@@ -11,7 +11,7 @@ function Header() {
       </h1>
     </div>
     <div className="col right-auto">
-        <a href="#">Home</a>
+        <a href="/">Home</a>
         <a href="/AboutUs">About Us</a>
         <a href="#">Contact</a>
     </div>
