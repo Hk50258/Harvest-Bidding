@@ -1,19 +1,18 @@
-import React, { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Note from "./Note";
-import CreateArea from "./CreateArea";
+import React, {useState} from 'react';
+import Note from "../components/Note";
+import CreateArea from "../components/CreateArea";
 
-function App() {
-  const [notes, setNotes] = useState([]);
+function ProductPage(props) {
 
-  function addNote(newNote) {
+    const [notes, setNotes] = useState([]);
+
+    function addNote(newNote) {
     setNotes(prevNotes => {
       return [...prevNotes, newNote];
     });
   }
 
-  function deleteNote(id) {
+    function deleteNote(id) {
     setNotes(prevNotes => {
       return prevNotes.filter((noteItem, index) => {
         return index !== id;
@@ -21,10 +20,9 @@ function App() {
     });
   }
 
-  return (
-    <div>
-      <Header />
-      <CreateArea onAdd={addNote} />
+    return (
+        <div>
+            <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
         return (
           <Note
@@ -36,9 +34,8 @@ function App() {
           />
         );
       })}
-      <Footer />
-    </div>
-  );
+        </div>
+    );
 }
 
-export default App;
+export default ProductPage;
